@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星露谷物语农场日记</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <div class="header-top">
+                <div class="farm-name">
+                    <i class="fas fa-tractor"></i>
+                    <span>鹈鹕镇农场日记</span>
+                </div>
+                <div class="current-date">
+                    <span>第2年 秋季 第18日 星期三</span>
+                    <div class="weather">
+                        <i class="fas fa-sun"></i>
+                        <span>晴天</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-main">
+                <h1><i class="fas fa-leaf"></i> 星露谷物语农场日记</h1>
+                <p class="subtitle">记录在星露谷的每一天生活与冒险</p>
+            </div>
+        </header>
+
+        <!-- 导航 -->
+        <nav>
+            <div class="nav-container">
+                <button class="nav-item active" data-target="farm-log">
+                    <i class="fas fa-book"></i>
+                    <span>农场日志</span>
+                </button>
+                <button class="nav-item" data-target="farm-stats">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>农场统计</span>
+                </button>
+                <button class="nav-item" data-target="villagers">
+                    <i class="fas fa-heart"></i>
+                    <span>村民关系</span>
+                </button>
+                <button class="nav-item" data-target="crops">
+                    <i class="fas fa-seedling"></i>
+                    <span>作物指南</span>
+                </button>
+                <button class="nav-item" data-target="goals">
+                    <i class="fas fa-flag"></i>
+                    <span>任务目标</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- 主要内容 -->
+        <main>
+            <div class="content-area">
+                <!-- 农场日志部分 -->
+                <section class="content-section active" id="farm-log">
+                    <div class="section-header">
+                        <h2><i class="fas fa-feather-alt"></i> 最新农场日志</h2>
+                        <button class="add-btn" id="add-log-btn">
+                            <i class="fas fa-plus"></i> 添加新日志
+                        </button>
+                    </div>
+
+                    <div class="log-entries">
+                        <!-- 日志1 -->
+                        <article class="log-entry">
+                            <div class="log-header">
+                                <div class="log-date">
+                                    <span class="date">秋季 第15日</span>
+                                    <span class="year">第2年</span>
+                                </div>
+                                <div class="log-weather">
+                                    <i class="fas fa-sun"></i> 晴天
+                                </div>
+                            </div>
+                            <h3 class="log-title">温室大丰收</h3>
+                            <div class="log-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-seedling"></i>
+                                    <span>温室内部 - 作物丰收</span>
+                                </div>
+                            </div>
+                            <div class="log-content">
+                                <p>今天是个大丰收的日子！温室里的蓝莓、蔓越莓和古代水果都成熟了。早上花了整整三个小时才全部收获完毕。</p>
+                                <p>算了一下，这批作物能卖将近2万金！终于攒够了钱可以升级洒水器了。皮埃尔看到我的收成时，眼睛都瞪大了。</p>
+                                <p>下午去社区中心参加了刘易斯镇长组织的秋季丰收节筹备会议，我被分配负责装饰南瓜灯。</p>
+                            </div>
+                            <div class="log-footer">
+                                <div class="log-tags">
+                                    <span class="tag">丰收</span>
+                                    <span class="tag">温室</span>
+                                    <span class="tag">秋季</span>
+                                </div>
+                                <button class="read-more-btn">阅读更多</button>
+                            </div>
+                        </article>
+
+                        <!-- 日志2 -->
+                        <article class="log-entry">
+                            <div class="log-header">
+                                <div class="log-date">
+                                    <span class="date">秋季 第14日</span>
+                                    <span class="year">第2年</span>
+                                </div>
+                                <div class="log-weather">
+                                    <i class="fas fa-cloud-rain"></i> 雨天
+                                </div>
+                            </div>
+                            <h3 class="log-title">矿井探险记</h3>
+                            <div class="log-image">
+                                <div class="image-placeholder mining">
+                                    <i class="fas fa-gem"></i>
+                                    <span>矿井深处 - 发现稀有矿石</span>
+                                </div>
+                            </div>
+                            <div class="log-content">
+                                <p>下雨天最适合下矿井了！今天的目标是到达第80层寻找铱矿石。</p>
+                                <p>在75层遇到了一个史莱姆王，战斗很激烈，但最终还是用银河剑解决了它。掉落了一个史莱姆蛋，可以带回去孵化。</p>
+                                <p>最令人兴奋的是在78层发现了一个铱矿石矿脉，挖到了6块铱矿石！这下升级工具的材料差不多了。</p>
+                                <p>回家路上顺道去了铁匠铺，克林特看到铱矿石时连连称赞。</p>
+                            </div>
+                            <div class="log-footer">
+                                <div class="log-tags">
+                                    <span class="tag">采矿</span>
+                                    <span class="tag">冒险</span>
+                                    <span class="tag">铱矿石</span>
+                                </div>
+                                <button class="read-more-btn">阅读更多</button>
+                            </div>
+                        </article>
+
+                        <!-- 日志3 -->
+                        <article class="log-entry">
+                            <div class="log-header">
+                                <div class="log-date">
+                                    <span class="date">秋季 第13日</span>
+                                    <span class="year">第2年</span>
+                                </div>
+                                <div class="log-weather">
+                                    <i class="fas fa-sun"></i> 晴天
+                                </div>
+                            </div>
+                            <h3 class="log-title">钓鱼大赛准备</h3>
+                            <div class="log-image">
+                                <div class="image-placeholder fishing">
+                                    <i class="fas fa-fish"></i>
+                                    <span>河边垂钓 - 练习钓鱼技巧</span>
+                                </div>
+                            </div>
+                            <div class="log-content">
+                                <p>秋季钓鱼大赛就要开始了，今天特意去河边练习了一整天。</p>
+                                <p>收获不错：3条大嘴鲈鱼、2条狗鱼，还意外钓到了一个宝藏箱，里面有2个钻石！</p>
+                                <p>威利给了我一些钓鱼技巧的建议，他说我的抛竿技术越来越专业了。希望能在大赛中取得好成绩！</p>
+                                <p>下午艾利欧特也来河边散步，我们聊了一会儿写作的话题。他邀请我有空去他的小屋坐坐。</p>
+                            </div>
+                            <div class="log-footer">
+                                <div class="log-tags">
+                                    <span class="tag">钓鱼</span>
+                                    <span class="tag">比赛</span>
+                                    <span class="tag">秋季活动</span>
+                                </div>
+                                <button class="read-more-btn">阅读更多</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 农场统计部分 -->
+                <section class="content-section" id="farm-stats">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-line"></i> 农场统计数据</h2>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon money">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value">128,750</div>
+                                <div class="stat-label">农场总收益(金)</div>
+                                <div class="stat-trend">
+                                    <i class="fas fa-arrow-up"></i>
+                                    比上月增长15%
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon crops">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value">45</div>
+                                <div class="stat-label">已种植作物种类</div>
+                                <div class="stat-trend">
+                                    <i class="fas fa-seedling"></i>
+                                    本月新增3种
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon animals">
+                                <i class="fas fa-paw"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">农场动物总数</div>
+                                <div class="stat-trend">
+                                    <i class="fas fa-heart"></i>
+                                    快乐度85%
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon days">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-value">245</div>
+                                <div class="stat-label">农场经营天数</div>
+                                <div class="stat-trend">
+                                    <i class="fas fa-clock"></i>
+                                    已解锁35项成就
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-section">
+                        <h3>季节进度</h3>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>春季完成度</span>
+                                <span>72%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill spring" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>夏季完成度</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill summer" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>秋季完成度</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill autumn" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>冬季完成度</span>
+                                <span>30%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill winter" style="width: 30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 村民关系部分 -->
+                <section class="content-section" id="villagers">
+                    <div class="section-header">
+                        <h2><i class="fas fa-users"></i> 村民关系状态</h2>
+                    </div>
+
+                    <div class="villagers-grid">
+                        <div class="villager-card">
+                            <div class="villager-avatar">
+                                <div class="avatar-img abigail"></div>
+                                <div class="hearts">
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="villager-info">
+                                <h3>阿比盖尔</h3>
+                                <p class="villager-desc">皮埃尔的女儿，喜欢冒险和探索</p>
+                                <div class="gift-suggestion">
+                                    <strong>推荐礼物：</strong>紫水晶、南瓜
+                                </div>
+                                <div class="last-gift">
+                                    上次送礼：2天前
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="villager-card">
+                            <div class="villager-avatar">
+                                <div class="avatar-img leah"></div>
+                                <div class="hearts">
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="villager-info">
+                                <h3>莉亚</h3>
+                                <p class="villager-desc">住在森林小木屋的艺术家</p>
+                                <div class="gift-suggestion">
+                                    <strong>推荐礼物：</strong>沙拉、果酒
+                                </div>
+                                <div class="last-gift">
+                                    上次送礼：今天
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="villager-card">
+                            <div class="villager-avatar">
+                                <div class="avatar-img elliott"></div>
+                                <div class="hearts">
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="villager-info">
+                                <h3>艾利欧特</h3>
+                                <p class="villager-desc">住在海滩边的作家</p>
+                                <div class="gift-suggestion">
+                                    <strong>推荐礼物：</strong>鱿鱼墨汁、石榴
+                                </div>
+                                <div class="last-gift">
+                                    上次送礼：1天前
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="villager-card">
+                            <div class="villager-avatar">
+                                <div class="avatar-img robin"></div>
+                                <div class="hearts">
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="villager-info">
+                                <h3>罗宾</h3>
+                                <p class="villager-desc">木匠，建造和升级建筑</p>
+                                <div class="gift-suggestion">
+                                    <strong>推荐礼物：</strong>桃子、意大利面
+                                </div>
+                                <div class="last-gift">
+                                    上次送礼：3天前
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="birthday-reminder">
+                        <h3><i class="fas fa-birthday-cake"></i> 近期村民生日</h3>
+                        <div class="birthday-list">
+                            <div class="birthday-item">
+                                <span class="birthday-name">潘妮</span>
+                                <span class="birthday-date">秋季 第2日</span>
+                                <button class="remind-btn">设置提醒</button>
+                            </div>
+                            <div class="birthday-item">
+                                <span class="birthday-name">莱纳斯</span>
+                                <span class="birthday-date">冬季 第3日</span>
+                                <button class="remind-btn">设置提醒</button>
+                            </div>
+                            <div class="birthday-item">
+                                <span class="birthday-name">皮埃尔</span>
+                                <span class="birthday-date">春季 第26日</span>
+                                <button class="remind-btn">设置提醒</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 作物指南部分 -->
+                <section class="content-section" id="crops">
+                    <div class="section-header">
+                        <h2><i class="fas fa-seedling"></i> 季节性作物指南</h2>
+                        <div class="season-filter">
+                            <button class="season-btn active" data-season="spring">春季</button>
+                            <button class="season-btn" data-season="summer">夏季</button>
+                            <button class="season-btn" data-season="fall">秋季</button>
+                            <button class="season-btn" data-season="winter">冬季</button>
+                        </div>
+                    </div>
+
+                    <div class="crops-guide">
+                        <!-- 春季作物 -->
+                        <div class="season-crops active" data-season="spring">
+                            <div class="crop-card">
+                                <div class="crop-icon">🥔</div>
+                                <div class="crop-info">
+                                    <h4>土豆</h4>
+                                    <p class="crop-desc">基础作物，有机会一次收获多个</p>
+                                    <div class="crop-details">
+                                        <span><i class="fas fa-clock"></i> 6天成熟</span>
+                                        <span><i class="fas fa-coins"></i> 80金/个</span>
+                                        <span><i class="fas fa-sun"></i> 春季种植</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="crop-card">
+                                <div class="crop-icon">🍓</div>
+                                <div class="crop-info">
+                                    <h4>草莓</h4>
+                                    <p class="crop-desc">节日限定，可重复收获</p>
+                                    <div class="crop-details">
+                                        <span><i class="fas fa-clock"></i> 8天成熟，每4天收获</span>
+                                        <span><i class="fas fa-coins"></i> 120金/个</span>
+                                        <span><i class="fas fa-sun"></i> 春季种植</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="crop-card">
+                                <div class="crop-icon">🥦</div>
+                                <div class="crop-info">
+                                    <h4>花椰菜</h4>
+                                    <p class="crop-desc">优质作物，价值较高</p>
+                                    <div class="crop-details">
+                                        <span><i class="fas fa-clock"></i> 12天成熟</span>
+                                        <span><i class="fas fa-coins"></i> 175金/个</span>
+                                        <span><i class="fas fa-sun"></i> 春季种植</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 夏季作物 -->
+                        <div class="season-crops" data-season="summer">
+                            <div class="crop-card">
+                                <div class="crop-icon">🫐</div>
+                                <div class="crop-info">
+                                    <h4>蓝莓</h4>
+                                    <p class="crop-desc">高产作物，每次收获多个</p>
+                                    <div class="crop-details">
+                                        <span><i class="fas fa-clock"></i> 13天成熟，每4天收获</span>
+                                        <span><i class="fas fa-coins"></i> 50金/个</span>
+                                        <span><i class="fas fa-sun"></i> 夏季种植</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="crop-card">
+                                <div class="crop-icon">🌶️</div>
+                                <div class="crop-info">
+                                    <h4>辣椒</h4>
+                                    <p class="crop-desc">可重复收获的调味品</p>
+                                    <div class="crop-details">
+                                        <span><i class="fas fa-clock"></i> 5天成熟，每3天收获</span>
+                                        <span><i class="fas fa-coins"></i> 40金/个</span>
+                                        <span><i class="fas fa-sun"></i> 夏季种植</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="crop-card">
+                                <div class="crop-icon">⭐</div>
+                                <div class="crop-info">
+                                    <h4>杨桃</h4>
+                                    <p class="crop-desc">沙漠种子，高价值</p>
+                                    <div class="crop-details">
+                                        <span><i class="fas fa-clock"></i> 13天成熟</span>
+                                        <span><i class="fas fa-coins"></i> 750金/个</span>
+                                        <span><i class="fas fa-sun"></i> 夏季种植</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 任务目标部分 -->
+                <section class="content-section" id="goals">
+                    <div class="section-header">
+                        <h2><i class="fas fa-tasks"></i> 农场任务目标</h2>
+                        <button class="add-btn" id="add-goal-btn">
+                            <i class="fas fa-plus"></i> 添加任务
+                        </button>
+                    </div>
+
+                    <div class="goals-list">
+                        <div class="goal-item">
+                            <div class="goal-checkbox">
+                                <input type="checkbox" id="goal1">
+                                <label for="goal1"></label>
+                            </div>
+                            <div class="goal-content">
+                                <h4>修复社区中心</h4>
+                                <p class="goal-desc">完成所有收集包，让社区中心恢复原貌</p>
+                                <div class="goal-progress">
+                                    <div class="progress-label">
+                                        <span>当前进度</span>
+                                        <span>6/8 个收集包</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goal-priority high">高优先级</div>
+                        </div>
+
+                        <div class="goal-item">
+                            <div class="goal-checkbox">
+                                <input type="checkbox" id="goal2">
+                                <label for="goal2"></label>
+                            </div>
+                            <div class="goal-content">
+                                <h4>解锁温室</h4>
+                                <p class="goal-desc">完成 pantry 收集包以解锁全年种植</p>
+                                <div class="goal-progress">
+                                    <div class="progress-label">
+                                        <span>当前进度</span>
+                                        <span>4/6 个收集包</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 67%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goal-priority medium">中优先级</div>
+                        </div>
+
+                        <div class="goal-item">
+                            <div class="goal-checkbox">
+                                <input type="checkbox" id="goal3" checked>
+                                <label for="goal3"></label>
+                            </div>
+                            <div class="goal-content">
+                                <h4>建造鸡舍</h4>
+                                <p class="goal-desc completed">✓ 已完成：鸡舍已建成，养了4只鸡</p>
+                                <div class="goal-progress">
+                                    <div class="progress-label">
+                                        <span>完成日期</span>
+                                        <span>秋季 第5日</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goal-priority completed">已完成</div>
+                        </div>
+
+                        <div class="goal-item">
+                            <div class="goal-checkbox">
+                                <input type="checkbox" id="goal4">
+                                <label for="goal4"></label>
+                            </div>
+                            <div class="goal-content">
+                                <h4>完成博物馆捐赠</h4>
+                                <p class="goal-desc">向博物馆捐赠95件物品</p>
+                                <div class="goal-progress">
+                                    <div class="progress-label">
+                                        <span>当前进度</span>
+                                        <span>45/95 件物品</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 47%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goal-priority low">低优先级</div>
+                        </div>
+                    </div>
+
+                    <div class="daily-tasks">
+                        <h3><i class="fas fa-calendar-day"></i> 今日待办事项</h3>
+                        <div class="task-list">
+                            <div class="task-item">
+                                <input type="checkbox" id="task1">
+                                <label for="task1">浇水（150个作物）</label>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task2" checked>
+                                <label for="task2" class="completed">收集鸡蛋和牛奶</label>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task3">
+                                <label for="task3">给村民送礼物（3人）</label>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" id="task4">
+                                <label for="task4">矿井探索（目标：80层）</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 侧边栏 -->
+            <aside class="sidebar">
+                <!-- 农场概况 -->
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-home"></i> 农场概况</h3>
+                    <div class="farm-overview">
+                        <div class="overview-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <div class="overview-label">农场类型</div>
+                                <div class="overview-value">标准农场</div>
+                            </div>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <div>
+                                <div class="overview-label">已开发面积</div>
+                                <div class="overview-value">65%</div>
+                            </div>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-water"></i>
+                            <div>
+                                <div class="overview-label">洒水器数量</div>
+                                <div class="overview-value">24个</div>
+                            </div>
+                        </div>
+                        <div class="overview-item">
+                            <i class="fas fa-tree"></i>
+                            <div>
+                                <div class="overview-label">果树</div>
+                                <div class="overview-value">8棵</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 季节提示 -->
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-calendar-alt"></i> 秋季贴士</h3>
+                    <div class="season-tips">
+                        <div class="tip-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>南瓜是秋季最赚钱的作物，记得多种！</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>参加秋季16日的万灵节活动，可以获取稀有物品</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>黑莓在秋季15-18日成熟，记得去灌木丛采集</p>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>为冬季做准备，开始储存动物饲料</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 快捷操作 -->
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-bolt"></i> 快捷操作</h3>
+                    <div class="quick-actions">
+                        <button class="quick-btn">
+                            <i class="fas fa-save"></i>
+                            <span>保存进度</span>
+                        </button>
+                        <button class="quick-btn">
+                            <i class="fas fa-sun"></i>
+                            <span>新的一天</span>
+                        </button>
+                        <button class="quick-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>购买种子</span>
+                        </button>
+                        <button class="quick-btn">
+                            <i class="fas fa-gift"></i>
+                            <span>查看礼物</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 近期事件 -->
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-calendar-check"></i> 近期事件</h3>
+                    <div class="upcoming-events">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">21</span>
+                                <span class="month">秋季</span>
+                            </div>
+                            <div class="event-info">
+                                <div class="event-title">秋季展览会</div>
+                                <div class="event-location">鹈鹕镇广场</div>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">27</span>
+                                <span class="month">秋季</span>
+                            </div>
+                            <div class="event-info">
+                                <div class="event-title">万灵节</div>
+                                <div class="event-location">小镇墓地</div>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">1</span>
+                                <span class="month">冬季</span>
+                            </div>
+                            <div class="event-info">
+                                <div class="event-title">冰雪节</div>
+                                <div class="event-location">煤矿森林</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <!-- 底部 -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>星露谷物语农场日记</h4>
+                    <p>记录每一天的农场生活与冒险</p>
+                    <p class="copyright">© 2025 鹈鹕镇农场日记 - 粉丝制作，非官方作品</p>
+                </div>
+                <div class="footer-section">
+                    <h4>农场信息</h4>
+                    <p>游戏版本: 1.6</p>
+                    <p>农场年份: 第2年</p>
+                    <p>总游戏时间: 68小时</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <a href="#">星露谷维基</a>
+                    <a href="#">社区中心</a>
+                    <a href="#">作物计算器</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 添加日志模态框 -->
+    <div class="modal" id="add-log-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>添加农场日志</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="log-title">日志标题</label>
+                    <input type="text" id="log-title" placeholder="输入日志标题">
+                </div>
+                <div class="form-group">
+                    <label for="log-content">日志内容</label>
+                    <textarea id="log-content" placeholder="写下今天的农场生活..." rows="6"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>今日天气</label>
+                    <div class="weather-options">
+                        <label class="weather-option">
+                            <input type="radio" name="weather" value="sunny" checked>
+                            <span><i class="fas fa-sun"></i> 晴天</span>
+                        </label>
+                        <label class="weather-option">
+                            <input type="radio" name="weather" value="rainy">
+                            <span><i class="fas fa-cloud-rain"></i> 雨天</span>
+                        </label>
+                        <label class="weather-option">
+                            <input type="radio" name="weather" value="windy">
+                            <span><i class="fas fa-wind"></i> 大风</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary cancel-btn">取消</button>
+                    <button class="btn btn-primary save-btn">保存日志</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
